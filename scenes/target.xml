@@ -5,7 +5,7 @@
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
 			<string_array  len="21">
-				<string> "target" </string>
+				<string> "platform_target" </string>
 				<string> "Sprite" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>

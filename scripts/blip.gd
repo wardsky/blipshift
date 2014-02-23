@@ -2,18 +2,18 @@ extends Node2D
 
 const MOVE_SPEED = 32
 const JUMP_DISTANCE = 64
-const JUMP_TIMEOUT = 0.2
+const DOUBLE_TAP_TIMEOUT = 0.2
 
-var arena
-
-var vel = Vector2(0, 0)
+var double_tap_timer = 0
 
 var anim_move_up_down
 var anim_move_left_right
 var anim_jump
 
-var jump_timer = 0
 var jump_action
+
+func is_jumping():
+	return anim_jump.is_playing()
 
 func _jump_finished():
 	if jump_action == "jump_up":
@@ -27,7 +27,6 @@ func _jump_finished():
 	anim_jump.seek(0, true)
 
 func _ready():
-	arena = get_node("/root/arena")
 	anim_move_up_down = get_node("anim_move_up_down")
 	anim_move_left_right = get_node("anim_move_left_right")
 	anim_jump = get_node("anim_jump")
@@ -36,6 +35,7 @@ func _ready():
 
 func _process(delta):
 	if !anim_jump.is_playing():
+		var vel = Vector2(0, 0)
 		if Input.is_action_pressed("move_up"):
 			vel.y = -MOVE_SPEED * delta
 		elif Input.is_action_pressed("move_down"):
@@ -49,8 +49,8 @@ func _process(delta):
 		else:
 			vel.x = 0
 		set_pos(get_pos() + vel)
-	if jump_timer > 0:
-		jump_timer -= delta
+	if double_tap_timer > 0:
+		double_tap_timer -= delta
 
 func _input(ev):
 	var jump_action_maybe = "none"
@@ -78,9 +78,9 @@ func _input(ev):
 				anim_move_left_right.stop()
 				jump_action_maybe = "jump_right"
 			if !anim_jump.is_playing():
-				if jump_timer > 0 and jump_action == jump_action_maybe:
+				if double_tap_timer > 0 and jump_action == jump_action_maybe:
 					anim_jump.play(jump_action)
 					anim_jump.connect("finished", self, "_jump_finished", [], CONNECT_ONESHOT)
 				else:
-					jump_timer = JUMP_TIMEOUT
+					double_tap_timer = DOUBLE_TAP_TIMEOUT
 					jump_action = jump_action_maybe
