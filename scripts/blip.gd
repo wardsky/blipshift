@@ -4,6 +4,8 @@ const MOVE_SPEED = 32
 const JUMP_DISTANCE = 64
 const JUMP_TIMEOUT = 0.2
 
+var arena
+
 var vel = Vector2(0, 0)
 
 var anim_move_up_down
@@ -25,6 +27,7 @@ func _jump_finished():
 	anim_jump.seek(0, true)
 
 func _ready():
+	arena = get_node("/root/arena")
 	anim_move_up_down = get_node("anim_move_up_down")
 	anim_move_left_right = get_node("anim_move_left_right")
 	anim_jump = get_node("anim_jump")
