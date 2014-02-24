@@ -9,11 +9,23 @@ var double_tap_timer = 0
 var anim_move_up_down
 var anim_move_left_right
 var anim_jump
+var anim_die
 
 var jump_action
 
 func is_jumping():
 	return anim_jump.is_playing()
+
+func is_dying():
+	return anim_die.is_playing()
+
+func kill():
+	set_process(false)
+	set_process_input(false)
+	anim_move_up_down.stop()
+	anim_move_left_right.stop()
+	anim_die.connect("finished", self, "_die_finished")
+	anim_die.play("die")
 
 func _jump_finished():
 	if jump_action == "jump_up":
@@ -26,10 +38,16 @@ func _jump_finished():
 		set_pos(get_pos() + Vector2(JUMP_DISTANCE, 0))
 	anim_jump.seek(0, true)
 
+func _die_finished():
+	emit_signal("dead")
+	queue_free()
+
 func _ready():
 	anim_move_up_down = get_node("anim_move_up_down")
 	anim_move_left_right = get_node("anim_move_left_right")
 	anim_jump = get_node("anim_jump")
+	anim_die = get_node("anim_die")
+	add_user_signal("dead")
 	set_process(true)
 	set_process_input(true)
 
@@ -53,6 +71,8 @@ func _process(delta):
 		double_tap_timer -= delta
 
 func _input(ev):
+	if anim_jump.is_playing():
+		return
 	var jump_action_maybe = "none"
 	if !ev.is_echo():
 		if ev.is_pressed():
@@ -77,10 +97,11 @@ func _input(ev):
 			elif ev.is_action("move_right"):
 				anim_move_left_right.stop()
 				jump_action_maybe = "jump_right"
-			if !anim_jump.is_playing():
+			if jump_action_maybe != "none":
 				if double_tap_timer > 0 and jump_action == jump_action_maybe:
 					anim_jump.play(jump_action)
 					anim_jump.connect("finished", self, "_jump_finished", [], CONNECT_ONESHOT)
+					double_tap_timer = -1
 				else:
 					double_tap_timer = DOUBLE_TAP_TIMEOUT
 					jump_action = jump_action_maybe
