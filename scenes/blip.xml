@@ -322,156 +322,6 @@
 
 	</resource>
 	<resource type="Animation" path="local://5">
-		<string name="resource/name"> "jump_up" </string>
-		<real name="length"> 0.25 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.05 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "frag_ul:transform/pos" </node_path>
-		<int name="tracks/0/interp"> 2 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> 0, -32 </vector2>
-				<vector2> 0, -64 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.05, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/1/type"> "value" </string>
-		<node_path name="tracks/1/path"> "frag_ur:transform/pos" </node_path>
-		<int name="tracks/1/interp"> 2 </int>
-		<dictionary name="tracks/1/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> 0, -32 </vector2>
-				<vector2> 0, -64 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.1, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/2/type"> "value" </string>
-		<node_path name="tracks/2/path"> "frag_ll:transform/pos" </node_path>
-		<int name="tracks/2/interp"> 2 </int>
-		<dictionary name="tracks/2/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> 0, -32 </vector2>
-				<vector2> 0, -64 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.2, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/3/type"> "value" </string>
-		<node_path name="tracks/3/path"> "frag_lr:transform/pos" </node_path>
-		<int name="tracks/3/interp"> 2 </int>
-		<dictionary name="tracks/3/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> 0, -32 </vector2>
-				<vector2> 0, -64 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.15, 0.25 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://6">
-		<string name="resource/name"> "jump_left" </string>
-		<real name="length"> 0.25 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.05 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "frag_ul:transform/pos" </node_path>
-		<int name="tracks/0/interp"> 2 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> -32, 0 </vector2>
-				<vector2> -64, 0 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.05, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/1/type"> "value" </string>
-		<node_path name="tracks/1/path"> "frag_ur:transform/pos" </node_path>
-		<int name="tracks/1/interp"> 2 </int>
-		<dictionary name="tracks/1/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> -32, 0 </vector2>
-				<vector2> -64, 0 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.2, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/2/type"> "value" </string>
-		<node_path name="tracks/2/path"> "frag_ll:transform/pos" </node_path>
-		<int name="tracks/2/interp"> 2 </int>
-		<dictionary name="tracks/2/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> -32, 0 </vector2>
-				<vector2> -64, 0 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.1, 0.25 </real_array>
-		</dictionary>
-		<string name="tracks/3/type"> "value" </string>
-		<node_path name="tracks/3/path"> "frag_lr:transform/pos" </node_path>
-		<int name="tracks/3/interp"> 2 </int>
-		<dictionary name="tracks/3/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="3"> 				1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="3" shared="false">
-				<vector2> 0, 0 </vector2>
-				<vector2> -32, 0 </vector2>
-				<vector2> -64, 0 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="3"> 				0, 0.15, 0.25 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://7">
 		<string name="resource/name"> "jump_down" </string>
 		<real name="length"> 0.25 </real>
 		<bool name="loop"> False </bool>
@@ -546,7 +396,7 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://8">
+	<resource type="Animation" path="local://6">
 		<string name="resource/name"> "jump_right" </string>
 		<real name="length"> 0.25 </real>
 		<bool name="loop"> False </bool>
@@ -618,6 +468,156 @@
 			</array>
 			<string> "times" </string>
 			<real_array  len="3"> 				0, 0.1, 0.25 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://7">
+		<string name="resource/name"> "jump_left" </string>
+		<real name="length"> 0.25 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.05 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "frag_ul:transform/pos" </node_path>
+		<int name="tracks/0/interp"> 2 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> -32, 0 </vector2>
+				<vector2> -64, 0 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.05, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> "frag_ur:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 2 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> -32, 0 </vector2>
+				<vector2> -64, 0 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.2, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> "frag_ll:transform/pos" </node_path>
+		<int name="tracks/2/interp"> 2 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> -32, 0 </vector2>
+				<vector2> -64, 0 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.1, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> "frag_lr:transform/pos" </node_path>
+		<int name="tracks/3/interp"> 2 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> -32, 0 </vector2>
+				<vector2> -64, 0 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.15, 0.25 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://8">
+		<string name="resource/name"> "jump_up" </string>
+		<real name="length"> 0.25 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.05 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "frag_ul:transform/pos" </node_path>
+		<int name="tracks/0/interp"> 2 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> 0, -32 </vector2>
+				<vector2> 0, -64 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.05, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> "frag_ur:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 2 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> 0, -32 </vector2>
+				<vector2> 0, -64 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.1, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> "frag_ll:transform/pos" </node_path>
+		<int name="tracks/2/interp"> 2 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> 0, -32 </vector2>
+				<vector2> 0, -64 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.2, 0.25 </real_array>
+		</dictionary>
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> "frag_lr:transform/pos" </node_path>
+		<int name="tracks/3/interp"> 2 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 0, 0 </vector2>
+				<vector2> 0, -32 </vector2>
+				<vector2> 0, -64 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.15, 0.25 </real_array>
 		</dictionary>
 
 	</resource>
@@ -738,10 +738,10 @@
 				<string> "anims/move_left" </string>
 				<string> "anims/move_right" </string>
 				<string> "anim_jump" </string>
-				<string> "anims/jump_up" </string>
-				<string> "anims/jump_left" </string>
 				<string> "anims/jump_down" </string>
 				<string> "anims/jump_right" </string>
+				<string> "anims/jump_left" </string>
+				<string> "anims/jump_up" </string>
 				<string> "anim_die" </string>
 				<string> "anims/die" </string>
 			</string_array>
@@ -765,7 +765,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="3" shared="false">
 								<string> "res://scripts/blip.gd" </string>

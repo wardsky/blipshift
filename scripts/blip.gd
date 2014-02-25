@@ -1,6 +1,6 @@
 extends Node2D
 
-const MOVE_SPEED = 32
+const MOVE_SPEED = 48
 const JUMP_DISTANCE = 64
 const DOUBLE_TAP_TIMEOUT = 0.2
 
