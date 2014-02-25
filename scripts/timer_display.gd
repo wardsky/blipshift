@@ -46,8 +46,8 @@ func _process(delta):
 	time += delta
 	
 	if time > time_limit:
+		time = time_limit
 		emit_signal("timeout")
-		return
 	
 	# Update time counter display
 	if time >= 100:

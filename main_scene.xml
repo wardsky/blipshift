@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://scripts/timer_display.*" type="Script"></ext_resource>
-	<ext_resource path="res://images/timer_numbers.*" type="Texture"></ext_resource>
-	<ext_resource path="res://images/timer_period.*" type="Texture"></ext_resource>
 	<ext_resource path="res://images/backdrop.*" type="Texture"></ext_resource>
 	<ext_resource path="res://images/timer_bar.*" type="Texture"></ext_resource>
+	<ext_resource path="res://images/timer_period.*" type="Texture"></ext_resource>
 	<ext_resource path="res://images/title.*" type="Texture"></ext_resource>
+	<ext_resource path="res://images/timer_numbers.*" type="Texture"></ext_resource>
 	<ext_resource path="res://scripts/main.*" type="Script"></ext_resource>
 	<resource type="Animation" path="local://1">
 		<string name="resource/name"> "fade_in" </string>
@@ -116,7 +116,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="2" shared="false">
 								<string> "res://scripts/main.gd" </string>

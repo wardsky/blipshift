@@ -104,14 +104,14 @@ func reset():
 	reposition_target()
 	
 	# Set timer running
-	timer = get_node("overlay/timer_display")
-	timer.connect("timeout", self, "game_over")
 	timer.start()
 	
 	set_process(true)
 
 func _ready():
 	randomize()
+	timer = get_node("overlay/timer_display")
+	timer.connect("timeout", self, "game_over")
 	begin_game()
 
 func _process(delta):
