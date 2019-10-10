@@ -1,0 +1,43 @@
+[gd_resource type="PackedScene" load_steps=2 format=2]
+
+[ext_resource path="res://images/backdrop.png" type="Texture" id=0]
+[ext_resource path="res://scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://images/title.png" type="Texture" id=2]
+[ext_resource path="res://scripts/timer_display.gd" type="Script" id=3]
+[ext_resource path="res://images/timer_numbers.png" type="Texture" id=4]
+[ext_resource path="res://images/timer_period.png" type="Texture" id=5]
+[ext_resource path="res://images/timer_bar.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "fade_in"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0022273, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+
+[resource]
+
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Sprite", "arena", "self_modulate", "texture", "offset", "script", "__meta__", "CanvasLayer", "blocks", "layer", "rotation", "scale", "player", "overlay", "title", "editor/display_folded", "modulate", "position", "AnimationPlayer", "fade_in", "playback_process_mode", "playback_default_blend_time", "root_node", "anims/fade_in", "playback_active", "playback_speed", "blend_times", "autoplay", "Node", "timer_display", "Node2D", "time_counter", "hundreds", "visible", "hframes", "tens", "ones", "point", "tenths", "hundredths", "thousandths", "timer_bar", "centered", "region_enabled", "region_rect" ),
+"node_count": 16,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 0, 1, -1, 5, 2, 0, 3, 1, 4, 2, 5, 1, 6, 3, 0, 0, 0, 7, 8, -1, 4, 9, 4, 4, 5, 10, 6, 11, 7, 0, 0, 0, 7, 12, -1, 4, 9, 4, 4, 5, 10, 6, 11, 7, 0, 0, 0, 7, 13, -1, 4, 9, 4, 4, 5, 10, 6, 11, 7, 0, 3, 0, 0, 14, -1, 4, 15, 8, 16, 9, 17, 2, 3, 1, 0, 4, 0, 18, 19, -1, 8, 20, 4, 21, 6, 22, 10, 23, 11, 24, 8, 25, 12, 26, 13, 27, 14, 0, 3, 0, 28, 29, -1, 1, 5, 1, 0, 6, 0, 30, 31, -1, 3, 17, 15, 11, 16, 6, 17, 0, 7, 0, 0, 32, -1, 3, 33, 18, 3, 1, 34, 19, 0, 7, 0, 0, 35, -1, 4, 33, 18, 3, 1, 4, 20, 34, 19, 0, 7, 0, 0, 36, -1, 3, 3, 1, 4, 21, 34, 19, 0, 7, 0, 0, 37, -1, 2, 3, 1, 4, 22, 0, 7, 0, 0, 38, -1, 3, 3, 1, 4, 23, 34, 19, 0, 7, 0, 0, 39, -1, 3, 3, 1, 4, 24, 34, 19, 0, 7, 0, 0, 40, -1, 3, 3, 1, 4, 25, 34, 19, 0, 6, 0, 0, 41, -1, 6, 17, 26, 11, 27, 3, 1, 42, 18, 43, 8, 44, 28, 0 ),
+"variants": [ Color( 1, 1, 1, 0.5 ), null, Vector2( 320, 320 ), {
+"__editor_plugin_screen__": "Script"
+}, 1, Vector2( 0, 0 ), 0.0, Vector2( 1, 1 ), true, Color( 1, 1, 1, 0 ), NodePath(".."), , 1.0, [  ], "", Vector2( 570, 15 ), Vector2( 0.5, 0.5 ), {
+"_edit_group_": true
+}, false, 10, Vector2( 20, 0 ), Vector2( 40, 0 ), Vector2( 55, 0 ), Vector2( 70, 0 ), Vector2( 90, 0 ), Vector2( 110, 0 ), Vector2( 560, 10 ), Vector2( -1, 1 ), Rect2( 0, 0, 550, 10 ) ]
+}

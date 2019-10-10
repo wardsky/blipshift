@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Blip.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/target.png" type="Texture" id=3]
+[ext_resource path="res://images/title.png" type="Texture" id=4]
+[ext_resource path="res://Timer.gd" type="Script" id=5]
+[ext_resource path="res://scenes/TimerDisplay.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "pulse"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Theme" id=5]
+
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 8
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="PlayerObjects" type="Node2D" parent="."]
+
+[node name="Blip" parent="PlayerObjects" instance=ExtResource( 2 )]
+position = Vector2( -1.48366, -66.7643 )
+
+[node name="Target" type="Sprite" parent="PlayerObjects"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="PulseAnimator" type="AnimationPlayer" parent="PlayerObjects/Target"]
+anims/pulse = SubResource( 1 )
+
+[node name="Overlay" type="Node2D" parent="."]
+
+[node name="Title" type="Sprite" parent="Overlay"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Overlay/Title"]
+anims/fade_in = SubResource( 2 )
+
+[node name="Timer" type="Node2D" parent="Overlay"]
+script = ExtResource( 5 )
+
+[node name="TimerDisplay" parent="Overlay/Timer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 500.0
+margin_top = 10.0
+margin_right = 500.0
+margin_bottom = 42.0
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/Timer"]
+margin_left = 490.0
+margin_top = 40.0
+margin_right = 970.0
+margin_bottom = 72.0
+rect_rotation = -180.0
+size_flags_horizontal = 3
+theme = SubResource( 5 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Overlay/Timer/MarginContainer"]
+margin_top = 8.0
+margin_right = 480.0
+margin_bottom = 24.0
+size_flags_vertical = 1
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+max_value = 60.0
+value = 15.0
+percent_visible = false
+
+[connection signal="dead" from="PlayerObjects/Blip" to="." method="_on_Blip_dead"]
